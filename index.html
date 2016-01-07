@@ -3,21 +3,27 @@
 <head>
     <title></title>
     <style>
-    ul li { color: red;}
-    .emphasis {color: green;}
+    
+    .emphasis {font-weight: bold;}
     </style>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+        $('li:first-child').addClass('emphasis');
+    });
+    </script>
 </head>
 <body>
 
 <ul>
     <li>hello</li>
     <li>hello 2</li>
+    <li>hello 3</li>
 </ul>
 
 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script>
-    $('ul li').addClass('emphasis');
-</script>
+
+
 </body>
 </html>
