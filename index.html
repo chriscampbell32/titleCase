@@ -4,26 +4,32 @@
     <title></title>
     <style>
     
-    .emphasis {font-weight: bold;}
+   
+    ul.emphasis > li {
+        color: red;
+    }
     </style>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script>
-    $(document).ready(function(){
-
-        $('li:first-child').addClass('emphasis');
-    });
-    </script>
+  
+    
 </head>
 <body>
 
-<ul>
+<ul class="emphasis">
     <li>hello</li>
     <li>hello 2</li>
-    <li>hello 3</li>
+    <li>
+        <ul>
+        <li>hello from the nest</li>
+
+        </ul>
+    </li>
 </ul>
 
-
-
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    
+$('ul.emphasis').children('li').eq(1).text('added with jquery');
+</script>
 
 </body>
 </html>
