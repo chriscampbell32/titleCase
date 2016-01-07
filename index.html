@@ -28,7 +28,8 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>
     
-$('ul.emphasis').children('li').eq(1).text('added with jquery');
+$('ul.emphasis').children('li:nth-child(2)').text('added with jquery');
+$('li').parent('').removeClass('emphasis');
 </script>
 
 </body>
